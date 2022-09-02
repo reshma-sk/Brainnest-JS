@@ -12,7 +12,7 @@ function computerPlay() {
 //playRound function
 function playRound(playerSelection, computerSelection){
     if(playerSelection === "rock" && computerSelection === 'paper') {
-        result = `You loose! ${computerSelection} beats ${playerSelection}!`; 
+        result = `You lose! ${computerSelection} beats ${playerSelection}!`; 
         computerScore += 1;   
     } else if (playerSelection === 'rock' && computerSelection === 'rock') {
         result = `Its a tie! both chosen ${playerSelection}!`;
