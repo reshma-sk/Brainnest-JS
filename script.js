@@ -52,26 +52,26 @@ function playRound(playerSelection, computerSelection){
 //game function
 function game(){
     for(let i = 0; i < 5; i++){
-        let playerSelection = prompt("Do you choose rock or paper or scissors?").toLowerCase();
+        let playerSelection = prompt("Please choose Rock or Paper or Scissors").toLowerCase();
         if(playerSelection ==="paper" || playerSelection ==="rock" || playerSelection ==="scissors"){
         let computerSelection= computerPlay();
         playRound(playerSelection, computerSelection);
         }
         else{
             alert("Wrong input,choose correct");
-            playerSelection = prompt("Do you choose rock or paper or scissors?").toLowerCase(); 
+            playerSelection = prompt("Please choose Rock or Paper or Scissors").toLowerCase(); 
             computerSelection = computerPlay();
             playRound(playerSelection, computerSelection);
         }
     }   
         if(playerScore > computerScore){
-        console.log(`computer score:${computerScore} \nplayer score:${playerScore}\nYou won`);
+        console.log(`computer score:${computerScore} \n player score:${playerScore}\n You won`);
         }
         else if(playerScore < computerScore){
-        console.log(`computer score:${computerScore} \nplayer score:${playerScore}\ncomputer won the game.`);
+        console.log(`computer score:${computerScore} \n player score:${playerScore}\n Computer won the game`);
         }
         else if(playerScore === computerScore){
-        console.log(`computer score:${computerScore} \nplayer score:${playerScore} \nIt's a Tie!`);
+        console.log(`computer score:${computerScore} \n player score:${playerScore} \n It's a Tie!`);
         }
 }
 game();
