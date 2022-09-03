@@ -65,13 +65,13 @@ function game(){
         }
     }   
         if(playerScore > computerScore){
-        console.log(`computer score:${computerScore} \n player score:${playerScore}.\n You won`);
+        console.log(`computer score:${computerScore} \nplayer score:${playerScore}\nYou won`);
         }
         else if(playerScore < computerScore){
-        console.log(`computer score:${computerScore} \n player score:${playerScore}.\n computer won the game.`);
+        console.log(`computer score:${computerScore} \nplayer score:${playerScore}\ncomputer won the game.`);
         }
         else if(playerScore === computerScore){
-        console.log(`computer score:${computerScore} \n player score:${playerScore} \n. It's a Tie!`);
+        console.log(`computer score:${computerScore} \nplayer score:${playerScore} \nIt's a Tie!`);
         }
 }
 game();
