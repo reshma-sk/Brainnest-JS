@@ -12,7 +12,7 @@ function computerPlay() {
 //playRound function
 function playRound(playerSelection, computerSelection){
     if(playerSelection === "rock" && computerSelection === 'paper') {
-        result = `You lose! ${computerSelection} beats ${playerSelection}!`; 
+        result = `You loose! ${computerSelection} beats ${playerSelection}!`; 
         computerScore += 1;   
     } else if (playerSelection === 'rock' && computerSelection === 'rock') {
         result = `Its a tie! both chosen ${playerSelection}!`;
@@ -52,16 +52,16 @@ function playRound(playerSelection, computerSelection){
 //game function
 function game(){
     for(let i = 0; i < 5; i++){
-        let userChoice = prompt("Do you choose rock or paper or scissors?").toLowerCase(); 
-        if(userChoice ==="paper" || userChoice ==="rock" || userChoice ==="scissors"){
-        computerChoice = computerPlay();
-        playRound(userChoice, computerChoice);
+        let playerSelection = prompt("Do you choose rock or paper or scissors?").toLowerCase();
+        if(playerSelection ==="paper" || playerSelection ==="rock" || playerSelection ==="scissors"){
+        let computerSelection= computerPlay();
+        playRound(playerSelection, computerSelection);
         }
         else{
             alert("Wrong input,choose correct");
-            let userChoice = prompt("Do you choose rock or paper or scissors?").toLowerCase(); 
-            computerChoice = computerPlay();
-            playRound(userChoice, computerChoice);
+            playerSelection = prompt("Do you choose rock or paper or scissors?").toLowerCase(); 
+            computerSelection = computerPlay();
+            playRound(playerSelection, computerSelection);
         }
     }   
         if(playerScore > computerScore){
