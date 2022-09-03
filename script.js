@@ -4,12 +4,12 @@ let result ;
 let computerChoice;
 let playerScore = 0;
 let computerScore = 0;
-//computerPlay function
+//Function to return random choice by computer
 function computerPlay() {
     const randomChoice = choices[Math.floor(Math.random()*choices.length)].toLowerCase();
     return randomChoice;
 }
-//playRound function
+//Function to return winner based on player selection & computer selection
 function playRound(playerSelection, computerSelection){
     if(playerSelection === "rock" && computerSelection === 'paper') {
         result = `You loose! ${computerSelection} beats ${playerSelection}!`; 
@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection){
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         result = `You win!${playerSelection} beats ${computerSelection} !`;
         playerScore += 1;
-//User Chooses Paper
+        //User Chooses Paper
     } else if(playerSelection === "paper" && computerSelection === 'rock') {
         result = `You win! ${playerSelection} beats ${computerSelection}!`;
         playerScore +=1;  
@@ -33,7 +33,6 @@ function playRound(playerSelection, computerSelection){
     else if(playerSelection === 'paper' && computerSelection === 'scissors') { 
         result = `You lose! ${computerSelection} beats ${playerSelection}!`;
         computerScore += 1; 
-//User Chooses Scissors
     } else if(playerSelection === "scissors" && computerSelection === 'rock') {
         result = `You lose! ${computerSelection} beats ${playerSelection}!`;
         computerScore += 1;
@@ -49,13 +48,13 @@ function playRound(playerSelection, computerSelection){
     }  
     return result;
 }
-//game function
+//Function to play game and decide winner
 function game(){
     for(let i = 0; i < 5; i++){
         let playerSelection = prompt("Please choose Rock or Paper or Scissors").toLowerCase();
         if(playerSelection ==="paper" || playerSelection ==="rock" || playerSelection ==="scissors"){
-        let computerSelection= computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
+            let computerSelection= computerPlay();
+            console.log(playRound(playerSelection, computerSelection));
         }
         else{
             alert("Wrong input,choose correct");
@@ -64,14 +63,15 @@ function game(){
             console.log(playRound(playerSelection, computerSelection));
         }
     }   
-        if(playerScore > computerScore){
+    if(playerScore > computerScore){
         console.log(`computer score:${computerScore} \n player score:${playerScore}\n You won`);
-        }
-        else if(playerScore < computerScore){
+    }
+    else if(playerScore < computerScore){
         console.log(`computer score:${computerScore} \n player score:${playerScore}\n Computer won the game`);
-        }
-        else if(playerScore === computerScore){
+    }
+    else if(playerScore === computerScore){
         console.log(`computer score:${computerScore} \n player score:${playerScore} \n It's a Tie!`);
-        }
+    }
 }
+//Start game
 game();
