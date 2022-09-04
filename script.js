@@ -58,16 +58,7 @@ function game(){
         }
         else{
             alert("Wrong input,choose correct");
-            playerSelection = prompt("Please choose Rock or Paper or Scissors").toLowerCase();
-            if(playerSelection ==="paper" || playerSelection ==="rock" || playerSelection ==="scissors"){
-                computerSelection = computerPlay();
-                console.log(playRound(playerSelection, computerSelection));
-            }
-            else{
-                alert("Wrong input,choose correct");
-                i--;
-            }
-            
+            i--;
         }
     }   
     if(playerScore > computerScore){
